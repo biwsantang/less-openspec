@@ -21,15 +21,18 @@ run \`openspec-setup\` or explicitly authorize creating it.
    offer to revise that change with \`openspec-update-change\`.
 3. Inspect the affected code, tests, docs, and source specs before writing.
    Ground the plan in evidence; record material assumptions.
-4. Create \`proposal.md\`.
+4. Create \`proposal.md\` with the \`Change Proposal\` OKF front matter.
+   Record sources actually used for material claims; do not invent them.
 5. Create one or more delta specs for changes to specified behaviour. If the
    work has no specification impact, state that explicitly in the proposal
-   instead of inventing a capability.
-6. Create \`design.md\` only when a non-trivial technical decision or risk
+   instead of inventing a capability. Each delta uses \`Specification Delta\`
+   front matter.
+6. Create \`design.md\` with \`Technical Design\` front matter only when a non-trivial technical decision or risk
    needs to be recorded.
-7. Create \`tasks.md\` with ordered, independently verifiable checkbox tasks.
-8. Re-read all artifacts and check agreement on scope, capability paths, and
-   task ordering.
+7. Create \`tasks.md\` with \`Implementation Plan\` front matter and ordered,
+   independently verifiable checkbox tasks.
+8. Re-read all artifacts and check agreement on scope, capability paths, task
+   ordering, and the shared OKF 0.2 contract.
 
 Report the created files, key decisions, assumptions, and any question the
 user should answer before implementation. End by directing the user to

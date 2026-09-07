@@ -20,7 +20,10 @@ Read [the shared artifact model](../references/artifact-model.md) and
    modified.
 4. Re-read every source spec and verify the resulting content reflects each
    delta section once and only once.
-5. Do not edit or delete the delta specs. They remain evidence until archive.
+5. Keep each updated source spec a \`System Specification\`, preserve unknown
+   metadata, and update \`generated.by\` and \`generated.at\`. Do not add a
+   source reference unless it is genuine and stable after archive.
+6. Do not edit or delete the delta specs. They remain evidence until archive.
 
 Report the source specs changed, requirements reconciled, and any unresolved
 conflict. This skill does not archive the change.

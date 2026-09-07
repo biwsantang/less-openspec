@@ -19,7 +19,11 @@ Read [the shared artifact model](../references/artifact-model.md). Read
    - unrelated observations.
 5. Mark a task complete only when the evidence supports it. Do not silently
    change requirements to match incomplete implementation.
-6. If the change is ready, say so and recommend \`openspec-archive-change\`.
+6. When the user asks to record a successful verification, add or update the
+   relevant artifact's \`verified: { by, at }\` only after reporting the exact
+   supporting checks. Preserve unknown metadata and never record verification
+   for review-only or incomplete evidence.
+7. If the change is ready, say so and recommend \`openspec-archive-change\`.
    Otherwise recommend the smallest appropriate follow-up: apply, update, or
    sync.
 

@@ -1,11 +1,11 @@
 {
   "name": "less-openspec",
-  "version": "1.0.0",
-  "description": "Skills-only spec-driven development workflow for coding agents.",
+  "version": "1.1.0",
+  "description": "Skills-only OKF 0.2 spec-driven development workflow for coding agents.",
   "author": {
     "name": "Biw Santang"
   },
   "repository": "https://github.com/biwsantang/less-openspec",
   "license": "MIT",
-  "keywords": ["spec-driven-development", "planning", "skills"]
+  "keywords": ["spec-driven-development", "planning", "okf", "skills"]
 }

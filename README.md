@@ -1,8 +1,8 @@
 # Less OpenSpec
 
-Less OpenSpec is a skills-only implementation of spec-driven development for
-Codex and Claude Code. It has no CLI, MCP server, hooks, generated command
-files, global configuration, or hidden runtime state.
+Less OpenSpec is a skills-only implementation of OKF 0.2-compatible,
+spec-driven development for Codex and Claude Code. It has no CLI, MCP server,
+hooks, generated command files, global configuration, or hidden runtime state.
 
 Install the plugin from this repository's marketplace. Then use one of the
 bundled \`openspec-*\` skills in a coding-agent task.
@@ -13,6 +13,7 @@ The skills keep planning artifacts in the project repository:
 
 \`\`\`text
 wiki/
+├── index.md
 ├── INSTRUCTIONS.md
 ├── specs/
 └── changes/
@@ -23,6 +24,11 @@ wiki/
 lives in \`wiki/changes/<change-name>/\`; after implementation, its delta specs
 are reconciled with the main specs and the folder moves to
 \`wiki/changes/archive/\`.
+
+The optional `wiki/index.md` declares `okf_version: "0.2"`. All other
+generated Markdown is an OKF concept with YAML front matter, a required `type`,
+and optional provenance, source, lifecycle, and verification fields. The
+plugin preserves unknown OKF-compatible metadata.
 
 ## Workflow
 
@@ -40,6 +46,8 @@ openspec-apply-change → openspec-verify-change → openspec-archive-change
 - \`openspec-sync-specs\` merges delta specs into the source specs.
 - \`openspec-archive-change\` performs the final review, syncs when requested,
   and moves the completed change into the archive.
+
+- `openspec-validate-wiki` reviews the wiki's OKF 0.2 format without a runtime.
 
 ## Scope
 
