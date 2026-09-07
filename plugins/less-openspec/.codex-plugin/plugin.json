@@ -1,0 +1,27 @@
+{
+  "name": "less-openspec",
+  "version": "1.0.0",
+  "description": "Skills-only spec-driven development workflow for coding agents.",
+  "author": {
+    "name": "Biw Santang",
+    "url": "https://github.com/biwsantang"
+  },
+  "homepage": "https://github.com/biwsantang/less-openspec#readme",
+  "repository": "https://github.com/biwsantang/less-openspec",
+  "license": "MIT",
+  "keywords": ["spec-driven-development", "planning", "codex", "claude-code"],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Less OpenSpec",
+    "shortDescription": "Keep repository plans as ordinary Markdown.",
+    "longDescription": "A pure plugin that guides spec-driven planning, implementation, verification, and archiving without a CLI or runtime service.",
+    "developerName": "Biw Santang",
+    "category": "Productivity",
+    "capabilities": ["Planning", "Implementation guidance", "Local repository tools"],
+    "defaultPrompt": [
+      "Set up a wiki for spec-driven work in this repository.",
+      "Create a change proposal for the feature I described.",
+      "Verify and archive the current planned change."
+    ]
+  }
+}

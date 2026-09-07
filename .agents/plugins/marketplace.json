@@ -1,0 +1,20 @@
+{
+  "name": "less-openspec",
+  "interface": {
+    "displayName": "Less OpenSpec"
+  },
+  "plugins": [
+    {
+      "name": "less-openspec",
+      "source": {
+        "source": "local",
+        "path": "./plugins/less-openspec"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

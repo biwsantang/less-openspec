@@ -1,0 +1,13 @@
+{
+  "name": "less-openspec",
+  "owner": {
+    "name": "Biw Santang"
+  },
+  "plugins": [
+    {
+      "name": "less-openspec",
+      "source": "./plugins/less-openspec",
+      "description": "Spec-driven development skills for Claude Code."
+    }
+  ]
+}
