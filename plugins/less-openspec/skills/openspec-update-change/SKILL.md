@@ -20,8 +20,11 @@ Read [the shared artifact model](../references/artifact-model.md),
    of artifacts necessary to make the whole plan coherent.
 4. Keep proposal scope, delta requirements, design decisions, and task
    verification aligned. Update task order when dependencies change.
-5. Surface an ambiguity instead of silently selecting a product behaviour.
-6. Re-read all artifacts and summarize the changed decisions, files, and
+5. Preserve unknown OKF fields. For each changed artifact, update
+   \`generated.by\` and \`generated.at\`; add a source only when it reflects
+   actual new evidence.
+6. Surface an ambiguity instead of silently selecting a product behaviour.
+7. Re-read all artifacts and summarize the changed decisions, files, and
    remaining questions.
 
 Do not mark implementation tasks complete and do not modify application code.

@@ -23,8 +23,12 @@ Read [the shared artifact model](../references/artifact-model.md) and
 5. Create the target name \`YYYY-MM-DD-<change-name>\`, using the current date
    unless the name already starts with that exact pattern. Confirm that the
    archive target does not exist.
-6. Move the complete change directory to \`wiki/changes/archive/<target>/\`.
-7. Report the archived path, sync result, validation evidence, and any
+6. Update every Markdown concept in the completed change to
+   \`status: deprecated\`, preserving other OKF metadata and updating \`generated.by\`
+   and \`generated.at\`. Do not mark a document \`verified\` unless the
+   verification evidence supports it.
+7. Move the complete change directory to \`wiki/changes/archive/<target>/\`.
+8. Report the archived path, sync result, validation evidence, and any
    user-approved warnings.
 
 The archive is a move of user-owned Markdown, not deletion or hidden

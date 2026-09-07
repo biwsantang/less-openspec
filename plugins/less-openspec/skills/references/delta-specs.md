@@ -5,6 +5,17 @@ A change-local spec at
 \`wiki/specs/<capability>/spec.md\`.
 
 \`\`\`markdown
+---
+type: Specification Delta
+title: Delta for <Capability>
+description: Proposed changes to the accepted <Capability> specification.
+tags: [<stable tag>]
+status: draft
+generated:
+  by: less-openspec/1.1.0
+  at: <ISO 8601 timestamp with offset>
+---
+
 # Delta: <Capability>
 
 ## ADDED Requirements

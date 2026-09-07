@@ -12,9 +12,11 @@ Read [the shared artifact model](../references/artifact-model.md) and
 2. For each active change, report whether proposal, tasks, optional design, and
    delta specs exist; count complete and incomplete tasks; and identify the
    most likely next workflow.
-3. Inspect source specs only when needed to determine whether an active change
+3. Report malformed or missing OKF front matter as a format warning; do not
+   repair user-owned artifacts during this read-only workflow.
+4. Inspect source specs only when needed to determine whether an active change
    appears synced.
-4. Keep the report read-only. If \`wiki/\` is missing, explain that setup is the
+5. Keep the report read-only. If \`wiki/\` is missing, explain that setup is the
    next step and recommend \`openspec-setup\`.
 
 Do not use a global registry or infer work from another repository.

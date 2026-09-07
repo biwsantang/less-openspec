@@ -10,6 +10,7 @@ The only planning root is \`<repo>/wiki/\`:
 
 \`\`\`text
 wiki/
+├── index.md                    # recommended OKF bundle index
 ├── INSTRUCTIONS.md
 ├── specs/
 └── changes/
@@ -18,6 +19,37 @@ wiki/
 
 Read \`wiki/INSTRUCTIONS.md\` before every workflow. It is user-owned project
 guidance. Preserve it and do not create hidden configuration or session files.
+
+## OKF 0.2 contract
+
+The wiki is an [Open Knowledge Format 0.2][okf] bundle. It remains ordinary
+Markdown: no CLI, service, registry, hidden state, or schema tooling is needed.
+
+- \`wiki/index.md\` is a reserved root index. When present, its front matter is
+  exactly \`okf_version: "0.2"\`; it has no \`type\` or other metadata.
+- \`wiki/log.md\`, if a project chooses to add one, is also reserved and has no
+  concept front matter. Do not create it automatically; Git history is normally
+  enough.
+- Every other Markdown file under \`wiki/\`, including \`INSTRUCTIONS.md\`, is
+  a concept. It needs parseable YAML front matter with a non-empty \`type\`.
+- Use the recommended \`title\`, \`description\`, and \`tags\` when useful for
+  discovery. Use \`status\` only as \`draft\`, \`stable\`, or \`deprecated\`.
+- On a material skill-authored edit, update \`generated.by\` and
+  \`generated.at\` (an ISO 8601 timestamp with an offset). Preserve unknown
+  front-matter fields. Do not write legacy \`timestamp\`.
+- Add \`sources\` only for artifacts genuinely consulted. Every source has a
+  \`resource\`; give claim sources a stable \`id\` and cite it in the body as
+  \`[^id]\`. A repository path may use the portable producer URI form
+  \`repo://path/from/repository-root\`.
+- Set \`verified\` only when the verifier has actual, reported evidence. It is
+  never a guess, a synonym for generation, or an automatic archive marker.
+
+The canonical types are: \`Repository Guidance\`, \`System Specification\`,
+\`Change Proposal\`, \`Technical Design\`, \`Implementation Plan\`, and
+\`Specification Delta\`. Type strings are descriptive rather than a closed
+registry.
+
+[okf]: https://github.com/GoogleCloudPlatform/knowledge-catalog/blob/main/okf/SPEC.md
 
 ## Change layout
 
@@ -43,6 +75,10 @@ explore → propose → apply → verify → archive
 Planning workflows may edit only \`wiki/\`. Apply is the only workflow that
 edits implementation files. Archive may move a completed change inside
 \`wiki/changes/\`.
+
+When an active change becomes an archive, set every concept in that change to
+\`status: deprecated\` before moving it. The documents remain usable historical
+records; the status means they are no longer the current planning guidance.
 
 ## Artifact rules
 
@@ -100,6 +136,11 @@ Before reporting a workflow complete, check what applies:
 - planning artifacts agree about scope;
 - implementation changes are covered by completed task evidence;
 - an archive target does not already exist.
+- all non-reserved \`wiki/**/*.md\` files have parseable front matter and a
+  non-empty \`type\`;
+- root \`index.md\`, if present, contains only \`okf_version: "0.2"\`;
+- every \`sources\` entry has \`resource\`, each cited \`[^id]\` matches a
+  source id, and generated or verified timestamps are ISO 8601 values.
 
 Report actual checks and limitations. Agent review is an evidence-based
 workflow, not a claim of machine-enforced validation.

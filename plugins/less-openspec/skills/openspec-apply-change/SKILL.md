@@ -18,7 +18,10 @@ Read [the shared artifact model](../references/artifact-model.md). Read
 4. Run the verification stated in the task where possible.
 5. Change a task from \`- [ ]\` to \`- [x]\` only after the specified behaviour
    is fully implemented and verified.
-6. Pause and ask the user when a task is unclear, a material design conflict is
+6. Whenever \`tasks.md\` is edited, preserve its OKF metadata and update
+   \`generated.by\` and \`generated.at\`. Do not set \`verified\` merely from a
+   task checkbox.
+7. Pause and ask the user when a task is unclear, a material design conflict is
    found, scope must change, or validation exposes an unresolved problem.
 
 On completion or pause, report completed tasks, verification evidence, remaining

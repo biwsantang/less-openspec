@@ -18,29 +18,34 @@ spec-driven planning.
 
 1. Resolve the repository root and inspect its instructions, README, source
    layout, and tests.
-2. Create only:
+2. Create the declared OKF bundle:
 
    \`\`\`text
    wiki/
+   ├── index.md
    ├── INSTRUCTIONS.md
    ├── specs/
    └── changes/
        └── archive/
    \`\`\`
 
-3. Write \`wiki/INSTRUCTIONS.md\` from the template, replacing placeholders
-   with observed project scope and conventions. Keep it short and useful.
-4. Do not create a configuration file, generated prompt, metadata file, hidden
+3. Write \`wiki/index.md\` from the OKF 0.2 template. Its front matter must be
+   exactly \`okf_version: "0.2"\`.
+4. Write \`wiki/INSTRUCTIONS.md\` from the OKF template, replacing placeholders
+   with observed project scope and conventions. It is a concept and therefore
+   needs a non-empty \`type\`. Keep it short and useful.
+5. Do not create a configuration file, generated prompt, metadata file, hidden
    state directory, or empty change.
-5. Report the created paths and the first useful next step:
+6. Report the created paths and the first useful next step:
    \`openspec-explore\` for an uncertain idea or \`openspec-propose\` for a
    ready change.
 
 ## Existing wiki
 
 If \`wiki/\` already exists, inspect it and report its state. Do not overwrite
-user-authored instructions or specs. Repair a missing conventional directory
-only when the user asked to repair or initialize the wiki.
+user-authored instructions or specs. Report OKF 0.2 gaps, including missing
+\`type\` front matter, but repair them only when the user asked to repair or
+initialize the wiki.
 
 ## Migration
 
